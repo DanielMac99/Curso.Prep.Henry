@@ -10,13 +10,13 @@ const nuevoNum = 6;
 const nuevoBool = true;
 
 // Resuelve el siguiente problema matemático:
-const nuevaResta = 10 - null === 5; //RESULTADO: nuevaResta = false ya que 10 no es igual a 5 
+const nuevaResta = 10 - 5 === 5; //RESULTADO: nuevaResta = false ya que 10 no es igual a 5 
 
 // Resuelve el siguiente problema matemático:
-const nuevaMultiplicacion = 10 * null === 40 ; //RESULTADO nuevaMultiplicacion = false ya que 0 no es igual a 40
+const nuevaMultiplicacion = 10 * 4 === 40 ; //RESULTADO nuevaMultiplicacion = false ya que 0 no es igual a 40
 
 // Resuelve el siguiente problema matemático:
-const nuevoModulo = 21 % 5 === null; //RESULTADO nuevoModulo = false ya que 1 no es igual a null, es decir 0 
+const nuevoModulo = 21 % 5 === 1; //RESULTADO nuevoModulo = false ya que 1 no es igual a null, es decir 0 
 
 
 // En los próximos 22 problemas, deberás completar la función.
@@ -42,7 +42,7 @@ function suma(x, y) {
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  var resultado = y - x;
+  var resultado = x - y;
   return resultado;
 }
 
@@ -66,7 +66,7 @@ function sonIguales(x, y) {
   // Tu código:
  // var siono = x === y;
   //return  siono;
-  if (x==y) {
+  if (x===y) {
     return true
   }
   return false;
@@ -76,7 +76,7 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (str1==str2) {
+  if (str1.length===str2.length) {
     return true;
   }
   return  false;
@@ -134,9 +134,9 @@ function elevarAlCuadrado(num) {
   // ojo: No es raiz cuadrada!
   // Tu código:
   //var cuadrado = num * num;
-  //return cuadrado; 
-  var cuad;
-  Math.pow(num,num) = cuad;
+  //return cuadrado;
+  var cuad; 
+  cuad = Math.pow(num,2);
   return cuad;
 }
 
@@ -146,7 +146,7 @@ function elevarAlCubo(num) {
   //var cubo = num * num * num;
   //return cubo;
   var cubo;
-  Math.pow(num,3) = cubo;
+  cubo = Math.pow(num,3);
   return cubo;
 }
 
@@ -154,7 +154,7 @@ function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
   var ele;
-  Math.pow(num,exponent) = ele;
+  ele = Math.pow(num,exponent);
   return ele;
 }
 
@@ -162,7 +162,7 @@ function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
   var rd;
-  Math.round(num) = rd;
+  rd = Math.round(num);
   return rd;
 }
 
@@ -170,7 +170,7 @@ function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
   var rda;
-  Math.ceil(num) = rda;
+  rda = Math.ceil(num);
   return rda;
 }
 
@@ -216,7 +216,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  var saludo = 'Hola ' + nombre;
+  var saludo = 'Hola ' + nombre + '!';
   return saludo;
 }
 
@@ -239,7 +239,7 @@ function retornarPerimetro(lado){
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-  var Atri = (base * alt) / 2;
+  var Atri = (base * altura) / 2;
   return Atri;
 }
 
@@ -249,9 +249,8 @@ function deEuroAdolar(euro){
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
   var dolar = 1.20;
-  var palab = 'dolares';
   var cambio = (euro * dolar) / 1;
-  return cambio + palab;
+  return cambio;
 }
 
 
